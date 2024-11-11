@@ -9,3 +9,80 @@
 @tailwind utilities;
 
 /* Custom CSS */
+
+body *{
+    border-color: initial;
+  }
+  
+  h1 {
+    color:white;
+  }
+  
+  section {
+    padding: 5%
+  }
+  
+  
+  /* typography  */
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  body h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+  
+  body h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    
+  }
+  
+  body h3 {
+  
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    
+  }
+  
+  body p {
+    font-weight: lighter;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+  }
+  
+  body button{
+    text-transform: uppercase;
+  }
+  
+  
+  /* background colors  */
+  
+  .bg-dark {
+    background:#2A424E
+  }
+  
+  .bg-light {
+   background-color: #AFD9E6
+  
+  }
+  
+  .dark-text{ 
+    color:#2A424E
+  }
+  
+  
+  
+  .custom-grid{
+    grid-template-columns: 1fr 300px 2.5fr;
+  }
+  
+  .custom-grid-2{
+    grid-template-columns: 2fr 3fr;
+  
+  }

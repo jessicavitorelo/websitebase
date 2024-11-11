@@ -1,5 +1,132 @@
 ---
 layout: default
-title: Homepage
+banner:
+    background-image: /images/neutral-image.jpg
+    heading: Catchy heading goes here
+    subheading: This is a subheading
+   
+our-services:
+    heading: Our services
+    services:
+        - image: /images/neutral-image.jpg
+          heading: Duis Aute
+          paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste quia unde soluta doloremque! Eum saepe facere, quod voluptates dolorum ducimus hic quis neque, numquam aliquam temporibus cumque nostrum impedit.
+        - image: /images/neutral-image.jpg
+          heading: Duis Aute
+          paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste quia unde soluta doloremque! Eum saepe facere, quod voluptates dolorum ducimus hic quis neque, numquam aliquam temporibus cumque nostrum impedit.
+        - image: /images/neutral-image.jpg
+          heading: Duis Aute
+          paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste quia unde soluta doloremque! Eum saepe facere, quod voluptates dolorum ducimus hic quis neque, numquam aliquam temporibus cumque nostrum impedit.
+page-banner: 
+    image: /images/neutral-image.jpg
+    heading: Who we are
+    paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ipsum beatae ea? Facere, beatae ex. Corporis esse temporibus maxime cumque error fugiat aliquam modi repellat, animi molestiae, quos quae eligendi.
+
+
+
 ---
-<h1 class="text-4xl font-bold text-green-900">Welcome to your homepage!</h1>
+  
+  
+  
+  
+  <!--------------------------services------------------------>
+
+  <section>
+  <h2> {{page.our-services.heading}}</h2>
+
+  <div class="grid md:grid-cols-3 gap-4 text-center">
+
+{% for item in page.our-services.services %}
+<div>
+
+    <div class="aspect-square bg-slate-300 md:order-1" style="background-image:url('{{item.image}}');"> </div>
+    <h3 class="md:order-2"> {{item.heading}}</h3>
+    <p class="border-t p-4 md:order-3"> {{item.paragraph}}</p>
+</div>
+
+{% endfor %}
+
+  </div>
+
+  </section>
+   <!--------------------------page banner - who we are (custom grid)------------------------>
+
+   <section class="p-0">
+
+    <div class="md:grid custom-grid md:min-h-[50vh] border-t " style="{{page.page-banner.image}}')">
+    
+    <div></div>
+    <div class="bg-slate-200/50 md:bg-slate-200 flex items-center border-x ">
+      <div class="m-5">
+        <h2>{{page.page-banner.heading}}</h2>
+        <p>{{page.page-banner.paragraph}}</p>
+        <button class=" border border-solid  px-5">Find out more</button>
+      </div>
+
+
+    </div>
+    <div></div>
+
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-6 text-xs text-center bg-black p-[1px] gap-[1px]">
+      <div class="bg-slate-200 p-3">Brand Name</div>
+      <div class="bg-slate-200 p-3">Brand Name</div>
+      <div class="bg-slate-200 p-3">Brand Name</div>
+      <div class="bg-slate-200 p-3">Brand Name</div>
+      <div class="bg-slate-200 p-3">Brand Name</div>
+      <div class="bg-slate-200 p-3">Brand Name</div>
+     
+    </div>
+   </section>
+
+
+ <!--------------------------Duis Aute Irure Gallery------------------------>
+<section>
+<div class="text-center max-w-2xl mx-auto">
+ <h2>Duis Aute Irure</h2>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate maiores nobis accusamus, sed culpa tempore laborum excepturi consectetur, nisi debitis pariatur harum, doloribus minima perferendis commodi earum ab? Reprehenderit, officiis.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+
+</div>
+
+<div class="text-center pt-8">
+<button class="px-5 border ">
+  Sign up
+</button>
+</div> 
+  </section>
+
+
+   <!--------------------------Contact Form------------------------>
+
+<section class="p-0">
+  <div class="md:grid custom-grid-2 min-h-[80vh] border ">
+
+    <div class="border-r  bg-slate-300" style="background-image:url(INSERT LINK HERE);">
+    </div>
+
+    <div class="p-16">
+      <h2>Contact Us</h2>
+      <form>
+        <input name="name" type="text" placeholder="name" class=" bg-inherit placeholder:text-inherit border-b  block w-full my-4">
+        <input name="email" type="email" placeholder="email" class=" bg-inherit placeholder:text-inherit  border-b  block w-full my-4">
+        <label for="message" class="w-full">message</label>
+        <textarea class="w-full resize-none border  block bg-inherit" rows="10" id="message">
+        </textarea>
+
+        <div class="text-right my-4">
+        <input type="submit" value="send" class="border px-5">
+      </div>
+      </form>
+    </div>
+
+</div>
+</section>

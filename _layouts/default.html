@@ -1,16 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Homepage
+---
+
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <title>{{page.title}}</title>
+
+  <!-- SEO  -->
+  <title>My First Tailwind Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- GOOGLE FONTS -->
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- TAILWIND CUSTOMIZE & EXTEND -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+<!-- TAILWIND CUSTOM CLASSES -->
+<style type="text/tailwindcss">
+  @layer components {
+    .btn-primary {
+      @apply py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700;
+    }
+  }
+</style>
+
+  <!-- CUSTOM CSS LINKS -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-    {{content}}
-</body>
+<body class="bg-slate-200">
 
-</html>
+
+  <!-------------------------- header with nav and banner----------------------->
+  <section class=" flex flex-col min-h-[75vh] md:min-h-screen p-0" style="background-image: url('{{page.banner.background-image}}') ;">
+    <nav class="md:grid grid-cols-3 items-center border-b">
+      <div class="hidden md:flex items-center justify-around p-4">
+         <a href="/figma.html">Nav 1</a>
+         <a href="#">Nav 2</a>
+         <a href="#">Nav 3</a>
+      </div>
+      
+      <div class="text-center">
+         <a class="inline-block  text-2xl uppercase content-center" href="#">Logo</a>
+      </div>
+      
+      <div class="hidden md:flex items-center justify-around p-4">
+         <a href="#">Nav 1</a>
+         <a href="#">Nav 2</a>
+         <a href="#">Nav 3</a>
+      </div>
+    </nav>
+
+    <div class=" p-4 my-auto text-center text-white">
+      <hr class="w-24 mx-auto pb-5">
+      <h1> This is a heading</h1>
+      <h2 class="text-sm normal-case"> This is a subheading</h2>
+    </div>
+
+  </section>
+
+{{content}}
+
+<!--------------------------Footer------------------------>
+<section>
+    <div class="grid grid-cols-3 md:grid-cols-4">
+    
+      <div class="p-3 max-w-32">
+        <h3>Lorem Ipsum</h3>
+        <p>dolor sit amet consectetur adipisicing elit. Dolorem alias</p>
+      </div>
+    
+      <div class="p-3 max-w-32">
+        <h3>Lorem Ipsum</h3>
+        <p>dolor sit amet consectetur adipisicing elit. Dolorem alias</p>
+      </div>
+    
+      <div class="p-3 max-w-32">
+        <h3>Lorem Ipsum</h3>
+        <p>dolor sit amet consectetur adipisicing elit. Dolorem alias</p>
+      </div>
+    
+      
+      <div class="p-3 col-span-3 md:col-span-1">
+        <h3>Subscribe to our newsletter</h3>
+        <textarea class="w-full resize-none border  block bg-inherit" rows="1" id="message">
+        </textarea>
+        <div class="text-right my-4">
+          <input type="submit" value="subscribe" class="border px-5">
+        </div>
+    
+      </div>
+    </div>
+    
+    </section>
+    
+    <!--------------------------Terms of use------------------------>
+    <section class="border  py-3">
+    
+      <div class="grid grid-cols-3">
+    
+      <div> 
+      <p>Terms of Use</p>
+      </div>
+    
+      <div></div>
+    
+      <div></div>
+    
+    </div>
+    
+    </section>
+    
+    
+    </body>
+    
+    </html>
