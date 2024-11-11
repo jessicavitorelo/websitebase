@@ -17,12 +17,36 @@ our-services:
         - image: /images/neutral-image.jpg
           heading: Duis Aute
           paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iste quia unde soluta doloremque! Eum saepe facere, quod voluptates dolorum ducimus hic quis neque, numquam aliquam temporibus cumque nostrum impedit.
+
 page-banner: 
     image: /images/neutral-image.jpg
     heading: Who we are
     paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ipsum beatae ea? Facere, beatae ex. Corporis esse temporibus maxime cumque error fugiat aliquam modi repellat, animi molestiae, quos quae eligendi.
+    button-text: Find out more
 
+brand-names:
+    brands:
+        - name: brand name
+        - name: brand name
+        - name: brand name
+        - name: brand name
+        - name: brand name
+        - name: brand name
 
+gallery:
+    heading: Duis Aute Irure
+    paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos a, odio quod impedit corporis repellat facilis labore doloremque quisquam, saepe expedita quasi perferendis eum? Ipsa recusandae corrupti aliquam culpa ullam.
+    gallery-images:
+        - image: /images/neutral-image.jpg
+        - image: /images/neutral-image.jpg
+        - image: /images/neutral-image.jpg
+        - image: /images/neutral-image.jpg
+        - image: /images/neutral-image.jpg
+        - image: /images/neutral-image.jpg
+    button-text: Sign up
+
+contact-form:
+    image: /images/neutral-image.jpg
 
 ---
   
@@ -53,14 +77,14 @@ page-banner:
 
    <section class="p-0">
 
-    <div class="md:grid custom-grid md:min-h-[50vh] border-t " style="{{page.page-banner.image}}')">
+    <div class="md:grid custom-grid md:min-h-[50vh] border-t " style="background-image: url('{{page.page-banner.image}}');">
     
     <div></div>
     <div class="bg-slate-200/50 md:bg-slate-200 flex items-center border-x ">
       <div class="m-5">
         <h2>{{page.page-banner.heading}}</h2>
         <p>{{page.page-banner.paragraph}}</p>
-        <button class=" border border-solid  px-5">Find out more</button>
+        <button class=" border border-solid  px-5">{{page.page-banner.button-text}}</button>
       </div>
 
 
@@ -70,36 +94,37 @@ page-banner:
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-6 text-xs text-center bg-black p-[1px] gap-[1px]">
-      <div class="bg-slate-200 p-3">Brand Name</div>
-      <div class="bg-slate-200 p-3">Brand Name</div>
-      <div class="bg-slate-200 p-3">Brand Name</div>
-      <div class="bg-slate-200 p-3">Brand Name</div>
-      <div class="bg-slate-200 p-3">Brand Name</div>
-      <div class="bg-slate-200 p-3">Brand Name</div>
-     
+    
+{% for item in page.brand-names.brands %}
+      <div class="bg-slate-200 p-3">{{item.name}}</div>
+    
+
+{% endfor %}
     </div>
    </section>
 
 
- <!--------------------------Duis Aute Irure Gallery------------------------>
+ <!--------------------------Gallery------------------------>
 <section>
 <div class="text-center max-w-2xl mx-auto">
- <h2>Duis Aute Irure</h2>
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate maiores nobis accusamus, sed culpa tempore laborum excepturi consectetur, nisi debitis pariatur harum, doloribus minima perferendis commodi earum ab? Reprehenderit, officiis.</p>
+ <h2>{{page.gallery.heading}}</h2>
+ <p>{{page.gallery.paragraph}}</p>
 </div>
+
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
-  <div class="aspect-square bg-slate-300 border " style="background-image:url(INSERT LINK HERE);"> </div>
+
+{% for item in page.gallery.gallery-images %}
+
+<div>
+  <div class="aspect-square bg-slate-300 border " style="background-image: url('{{item.image}}');"> </div>
+</div>
+{% endfor %}
 
 </div>
 
 <div class="text-center pt-8">
 <button class="px-5 border ">
-  Sign up
+  {{page.gallery.button-text}}
 </button>
 </div> 
   </section>
@@ -110,7 +135,7 @@ page-banner:
 <section class="p-0">
   <div class="md:grid custom-grid-2 min-h-[80vh] border ">
 
-    <div class="border-r  bg-slate-300" style="background-image:url(INSERT LINK HERE);">
+    <div class="border-r  bg-slate-300" style="background-image: url('{{page.contact-form.image}}');">
     </div>
 
     <div class="p-16">
