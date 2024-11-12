@@ -17,15 +17,32 @@ _structures:
     style: select
     id_key: blocks
     values:
-      - id:
-        default:
-        icon:
-        image:
-        label:
-        picker_preview:
-        preview:
-        tags:
-        value:
+      - label:
+        values:
+          - label: gallery
+            value: 
+            - id: gallery
+              heading: Duis Aute Irure
+              paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos a, odio quod impedit corporis repellat facilis labore doloremque quisquam, saepe expedita quasi perferendis eum? Ipsa recusandae corrupti aliquam culpa ullam.
+              gallery-images:
+                - image: /images/neutral-image.jpg
+                - image: /images/neutral-image.jpg
+                - image: /images/neutral-image.jpg
+                - image: /images/neutral-image.jpg
+                - image: /images/neutral-image.jpg
+                - image: /images/neutral-image.jpg
+              button-text: Sign up
+          - label: contact-form
+            value: 
+            - id: contant-form
+              image: /images/neutral-image.jpg
+              heading: Contact Us
+              name-label: name 
+              email-label: email
+              message-label: message
+              button-text: send
+              contact-form-position: right
+              
 _snippets_imports:
   jekyll: true
 timezone: Asia/Makassar
