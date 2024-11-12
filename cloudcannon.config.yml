@@ -1,19 +1,52 @@
+_schema: _schema
+source: /
+paths:
+  uploads: uploads
+  static: ''
 collections_config:
   pages:
     path: ''
     name: Pages
     icon: wysiwyg
-paths:
-  static: ''
-  uploads: uploads
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_structures:
+  blocks:
+    style: select
+    id_key: blocks
+    values:
+      - id:
+        default:
+        icon:
+        image:
+        label:
+        picker_preview:
+        preview:
+        tags:
+        value:
+_snippets_imports:
+  jekyll: true
 timezone: Asia/Makassar
 markdown:
   engine: kramdown
   options:
-    heading_ids: false
-    gfm: false
+    xhtml: false
     breaks: false
+    linkify: false
     typographer: false
+    spaced_lists: false
+    sentence_per_line: false
+    gfm: false
+    code_block_fences: '```'
+    escape_snippets_in_code_blocks: false
+    treat_indentation_as_code: true
+    table: false
+    strikethrough: false
+    subscript: false
+    superscript: false
+    heading_ids: false
     attributes: true
     attribute_elements:
       inline: right
@@ -21,6 +54,3 @@ markdown:
       tr: none
       td: none
       li: right-of-prefix
-    treat_indentation_as_code: true
-_snippets_imports:
-  jekyll: true
