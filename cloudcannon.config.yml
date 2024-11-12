@@ -16,11 +16,9 @@ _structures:
   blocks:
     style: select
     values:
-      - label:
-        values:
-          - label: gallery
-            value: 
-            - id: gallery
+      - label: gallery
+        value: 
+              id: gallery
               heading: Duis Aute Irure
               paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos a, odio quod impedit corporis repellat facilis labore doloremque quisquam, saepe expedita quasi perferendis eum? Ipsa recusandae corrupti aliquam culpa ullam.
               gallery-images:
@@ -31,9 +29,9 @@ _structures:
                 - image: /images/neutral-image.jpg
                 - image: /images/neutral-image.jpg
               button-text: Sign up
-          - label: contact-form
-            value: 
-            - id: contant-form
+      - label: contact-form
+        value: 
+              id: contant-form
               image: /images/neutral-image.jpg
               heading: Contact Us
               name-label: name 
