@@ -1,7 +1,7 @@
 ---
 layout: default
 banner:
-    background-image: /images/neutral-image.jpg
+    background-image: /images/plant.jpg
     heading: Catchy heading goes here
     subheading: This is a subheading
    
@@ -47,6 +47,11 @@ gallery:
 
 contact-form:
     image: /images/neutral-image.jpg
+    heading: Contact Us
+    name-label: name 
+    email-label: email
+    message-label: message
+    button-text: send
 
 ---
   
@@ -139,16 +144,16 @@ contact-form:
     </div>
 
     <div class="p-16">
-      <h2>Contact Us</h2>
+      <h2>{{page.contact-form.heading}}</h2>
       <form>
-        <input name="name" type="text" placeholder="name" class=" bg-inherit placeholder:text-inherit border-b  block w-full my-4">
-        <input name="email" type="email" placeholder="email" class=" bg-inherit placeholder:text-inherit  border-b  block w-full my-4">
-        <label for="message" class="w-full">message</label>
+        <input name="name" type="text" placeholder="{{page.contact-form.name-label}}" class=" bg-inherit placeholder:text-inherit border-b  block w-full my-4">
+        <input name="email" type="email" placeholder="{{page.contact-form.email-label}}" class=" bg-inherit placeholder:text-inherit  border-b  block w-full my-4">
+        <label for="message" class="w-full">{{page.contact-form.message-label}}</label>
         <textarea class="w-full resize-none border  block bg-inherit" rows="10" id="message">
         </textarea>
 
         <div class="text-right my-4">
-        <input type="submit" value="send" class="border px-5">
+        <input type="submit" value="{{page.contact-form.button-text}}" class="border px-5">
       </div>
       </form>
     </div>

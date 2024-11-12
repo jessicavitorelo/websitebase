@@ -49,7 +49,7 @@ title: Homepage
 
 
   <!-------------------------- header with nav and banner----------------------->
-  <section class=" flex flex-col min-h-[75vh] md:min-h-screen p-0" style="background-image: url('{{page.banner.background-image}}') ;">
+  <section class=" flex flex-col min-h-[75vh] md:min-h-screen p-0 bg-center bg-cover" style="background-image: url('{{page.banner.background-image}}') ;">
     <nav class="md:grid grid-cols-3 items-center border-b">
       <div class="hidden md:flex items-center justify-around p-4">
          <a href="/figma.html">Nav 1</a>
@@ -70,8 +70,8 @@ title: Homepage
 
     <div class=" p-4 my-auto text-center text-white">
       <hr class="w-24 mx-auto pb-5">
-      <h1> This is a heading</h1>
-      <h2 class="text-sm normal-case"> This is a subheading</h2>
+      <h1> {{page.banner.heading}}</h1>
+      <h2 class="text-sm normal-case">{{page.banner.subheading}} </h2>
     </div>
 
   </section>
