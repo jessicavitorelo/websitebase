@@ -15,7 +15,6 @@ collections_config:
 _structures:
   blocks:
     style: select
-    id_key: blocks
     values:
       - label:
         values:
