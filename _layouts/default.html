@@ -45,7 +45,7 @@ title: Homepage
 
 </head>
 
-<body class="bg-slate-200">
+<body class="bg-bg-orange-100">
 
 
   <!-------------------------- header with nav and banner----------------------->
@@ -76,10 +76,15 @@ title: Homepage
 
   </section>
 
+  {% for block in page.blocks %}
+  <!--{{block.id}}-->
+  {% include /blocks/{{block.id}}.html %}
+  {% endfor %}
+
 {{content}}
 
 <!--------------------------Footer------------------------>
-<section>
+<section class="bg-orange-100">
     <div class="grid grid-cols-3 md:grid-cols-4">
     
       <div class="p-3 max-w-32">
@@ -100,10 +105,10 @@ title: Homepage
       
       <div class="p-3 col-span-3 md:col-span-1">
         <h3>Subscribe to our newsletter</h3>
-        <textarea class="w-full resize-none border  block bg-inherit" rows="1" id="message">
+        <textarea class="w-full resize-none border border-black  block bg-inherit" rows="1" id="message">
         </textarea>
         <div class="text-right my-4">
-          <input type="submit" value="subscribe" class="border px-5">
+          <input type="submit" value="subscribe" class="border border-black px-5">
         </div>
     
       </div>
@@ -112,7 +117,7 @@ title: Homepage
     </section>
     
     <!--------------------------Terms of use------------------------>
-    <section class="border  py-3">
+    <section class="border  py-3 bg-orange-100">
     
       <div class="grid grid-cols-3">
     

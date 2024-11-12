@@ -1,0 +1,29 @@
+  <!--------------------------page banner - who we are (custom grid)------------------------>
+
+  <section class="p-0">
+
+    <div class="md:grid custom-grid md:min-h-[50vh] border-t bg-center bg-cover" style="background-image: url('{{block.image}}');">
+    
+    <div></div>
+    <div class="bg-bg-orange-100/50 md:bg-orange-100 flex items-center border-x ">
+      <div class="m-5">
+        <h2>{{block.heading}}</h2>
+        <p>{{block.paragraph}}</p>
+        <button class=" border border-solid border-black px-5">{{block.button-text}}</button>
+      </div>
+
+
+    </div>
+    <div></div>
+
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-6 text-xs text-center bg-black p-[1px] gap-[1px]">
+    
+{% for item in block.brands %}
+      <div class="bg-orange-100 p-3">{{item.name}}</div>
+    
+
+{% endfor %}
+    </div>
+   </section>

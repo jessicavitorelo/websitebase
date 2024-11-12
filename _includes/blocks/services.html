@@ -1,0 +1,20 @@
+  <!--------------------------services------------------------>
+
+  <section>
+    <h2> {{block.heading}}</h2>
+  
+    <div class="grid md:grid-cols-3 gap-4 text-center">
+  
+  {% for item in block.services %}
+  <div>
+  
+      <div class="aspect-square bg-slate-300 md:order-1 bg-center bg-cover mb-4" style="background-image:url('{{item.image}}');"> </div>
+      <h3 class="md:order-2"> {{item.heading}}</h3>
+      <p class="border-t p-4 md:order-3"> {{item.paragraph}}</p>
+  </div>
+  
+  {% endfor %}
+  
+    </div>
+  
+    </section>

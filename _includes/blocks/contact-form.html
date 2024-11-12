@@ -1,0 +1,25 @@
+  <!--------------------------Contact Form------------------------>
+
+  <section class="p-0">
+    <div class="md:grid grid-cols-2 min-h-[80vh] border bg-white ">
+  
+      <div class="border-r border-white bg-cover bg-center" style="background-image: url('{{block.image}}');">
+      </div>
+  
+      <div class="p-16 {% if block.contact-form-position == "left" %} order-first {% endif %}">
+        <h2>{{block.heading}}</h2>
+        <form>
+          <input name="name" type="text" placeholder="{{block.name-label}}" class=" bg-inherit placeholder:text-inherit border-b  border-black block w-full my-4">
+          <input name="email" type="email" placeholder="{{block.email-label}}" class=" bg-inherit placeholder:text-inherit  border-b  border-black block w-full my-4">
+          <label for="message" class="w-full">{{block.message-label}}</label>
+          <textarea class="w-full resize-none border  block border-black bg-inherit" rows="10" id="message">
+          </textarea>
+  
+          <div class="text-right my-4">
+          <input type="submit" value="{{block.button-text}}" class="border border-black px-5">
+        </div>
+        </form>
+      </div>
+  
+  </div>
+  </section>
